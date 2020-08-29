@@ -1,6 +1,6 @@
-import { SomeTool } from "./SomeTool"
+import { ParseBookmarksTool } from "./ParseBookmarksTool"
 
-const toolName = "some-tool"
+const toolName = "parse-bookmarks-tool"
 
 function getMockLog() {
   return {
@@ -21,7 +21,7 @@ function getOutput(fn) {
 
 test("--help", async (done) => {
   const log = getMockLog()
-  const tool = new SomeTool({ toolName, log })
+  const tool = new ParseBookmarksTool({ toolName, log })
 
   await expect(tool.run(["--help"])).resolves.toBe(0)
   expect(getOutput(log.info)).toEqual(expect.stringContaining("--help"))
@@ -30,7 +30,7 @@ test("--help", async (done) => {
 
 test("--version", async (done) => {
   const log = getMockLog()
-  const tool = new SomeTool({ toolName, log })
+  const tool = new ParseBookmarksTool({ toolName, log })
 
   await expect(tool.run(["--version"])).resolves.toBe(0)
   expect(getOutput(log.info)).toEqual(expect.stringMatching(/^v/))
