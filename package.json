@@ -43,6 +43,8 @@
   },
   "homepage": "https://github.com/jlyonsmith/parse-bookmarks-tool#readme",
   "dependencies": {
+    "@johnls/stream-utils": "^1.0.16",
+    "bookmarks-parser": "^1.5.0",
     "chalk": "^4.0.0",
     "minimist": "^1.2.5"
   },
