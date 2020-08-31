@@ -1,3 +1,3 @@
-# Node.js Command Line Tool
+# Parse Bookmarks File CLI Tool
 
-This is a Node.js command line tool template.
+Simple CLI tool to parse a Chrome/Firefox `bookmarks.html` file into a JSON file.
