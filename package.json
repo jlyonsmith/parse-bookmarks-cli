@@ -1,5 +1,5 @@
 {
-  "name": "parse-bookmarks-tool",
+  "name": "@johnls/parse-bookmarks-cli",
   "version": "1.0.0",
   "engines": {
     "node": ">=10.0"
@@ -8,11 +8,11 @@
     "darwin",
     "linux"
   ],
-  "description": "Node.js command line tool",
+  "description": "Bookmarks parsing CLI tool",
   "scripts": {
     "clean": "rm -rf dist",
     "build": "babel src -d dist --source-maps --ignore **/*.test.js",
-    "debug:parse-bookmarks-tool": "babel-node --inspect-brk src/parse-bookmarks-tool.js",
+    "debug:parse-bookmarks": "babel-node --inspect-brk src/parse-bookmarks.js",
     "test": "jest --coverage",
     "test:debug": "babel-node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
     "deploy": "npm publish --access public"
@@ -26,27 +26,28 @@
     ]
   },
   "bin": {
-    "parse-bookmarks-tool": "dist/parse-bookmarks-tool.js"
+    "parse-bookmarks": "dist/parse-bookmarks.js"
   },
   "files": [
     "dist/**"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jlyonsmith/parse-bookmarks-tool.git"
+    "url": "git+https://github.com/jlyonsmith/parse-bookmarks-cli.git"
   },
   "keywords": [],
   "author": "Some User",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jlyonsmith/parse-bookmarks-tool/issues"
+    "url": "https://github.com/jlyonsmith/parse-bookmarks-cli/issues"
   },
-  "homepage": "https://github.com/jlyonsmith/parse-bookmarks-tool#readme",
+  "homepage": "https://github.com/jlyonsmith/parse-bookmarks-cli#readme",
   "dependencies": {
+    "@johnls/parse-bookmarks": "^1.0.0",
     "@johnls/stream-utils": "^1.0.16",
-    "bookmarks-parser": "^1.5.0",
     "chalk": "^4.0.0",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "xmldom": "^0.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",

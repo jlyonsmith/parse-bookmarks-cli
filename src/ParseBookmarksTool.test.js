@@ -1,6 +1,6 @@
 import { ParseBookmarksTool } from "./ParseBookmarksTool"
 
-const toolName = "parse-bookmarks-tool"
+const toolName = "parse-bookmarks"
 
 function getMockLog() {
   return {
