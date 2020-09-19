@@ -63,9 +63,6 @@ options:
     const bookmarkHtml = await _promises.default.readFile(args._[0], {
       encoding: "utf-8"
     });
-
-    const asyncParseBookmarks = _util.default.promisify(parse);
-
     const items = (0, _parseBookmarks.parseBookmarks)(bookmarkHtml, {
       DOMParser: _xmldom.default.DOMParser,
       flatten: true
